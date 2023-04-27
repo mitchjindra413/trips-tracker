@@ -107,6 +107,7 @@ DATABASES = {
     }
 }
 
+#add JWT authentication
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
@@ -194,6 +195,8 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+
+#CORS
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
 ]
