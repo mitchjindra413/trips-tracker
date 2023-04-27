@@ -10,6 +10,9 @@ class Trip(models.Model):
     end_location = models.CharField(max_length=100)
     start_date = models.DateField()
     end_date = models.DateField()
-    flight_number = models.CharField(max_length=6)
-    distance = models.FloatField
+    flight_number = models.CharField(blank=True, max_length=6)
+    distance = models.FloatField(default=0)
+    lat = models.FloatField(default=0)
+    long = models.FloatField(default=0)
+    type = models.CharField(default='flight')
     notes = models.TextField(blank=True)
